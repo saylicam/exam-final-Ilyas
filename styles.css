@@ -1,0 +1,172 @@
+/* styles.css */
+
+/* Réinitialisation des styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du header et du logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Style du menu de navigation */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #ddd;
+}
+
+/* Style de la section d'accroche */
+.accroche {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    filter: brightness(50%);
+}
+
+.texte-accroche {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texte-accroche button {
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.texte-accroche button:hover {
+    background-color: #0056b3;
+}
+
+/* Style de la section des mises en avant */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    background-color: #f1f1f1;
+}
+
+.highlight {
+    text-align: center;
+}
+
+/* Effet continu sur les icônes */
+@keyframes icon-effect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.icon-effect {
+    animation: icon-effect 2s infinite;
+}
+
+.highlight i {
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight .description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Style de la section de contenu */
+.contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.bloc-contenu img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Limite la hauteur maximale de l'image */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur sans déformer */
+    border-radius: 8px; /* Ajoute des coins arrondis aux images */
+}
+
+.bloc-contenu {
+    width: 45%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column; /* Change la direction pour un affichage vertical */
+    align-items: center; /* Centre le contenu horizontalement */
+    text-align: center; /* Centre le texte */
+}
+
+.bloc-contenu p {
+    margin: 1rem 0; /* Espace entre les paragraphes et les images */
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+/* Styles pour les écrans de taille moyenne */
+@media (max-width: 768px) {
+    .bloc-contenu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .texte-accroche {
+        font-size: 1.2rem;
+    }
+
+    .texte-accroche button {
+        padding: 0.5rem 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
+
+/* Styles pour l'impression */
+@media print {
+    header, .accroche, .highlights, .contenu, footer {
+        display: none;
+    }
+}
+
+
